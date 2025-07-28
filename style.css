@@ -105,4 +105,8 @@ p {
     max-height: 250px;
     object-fit: cover;
   }
+
+  .music-control button{
+    background-color: transparent;
+  }
 }
