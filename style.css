@@ -1,0 +1,108 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: #fff0f5;
+  overflow-x: hidden; /* ← apenas esconde rolagem lateral */
+}
+
+.container {
+  background: white;
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  max-width: 400px;
+  margin: 40px auto;
+  text-align: center;
+  position: relative;
+  z-index: 10;
+}
+
+.image-container img {
+  width: 100%;
+  height: auto;
+  border-radius: 15px;
+  margin-bottom: 15px;
+}
+
+h1,
+h2 {
+  color: #d6336c;
+}
+
+p {
+  color: #444;
+  font-size: 1rem;
+}
+
+/* ❤️ Animação corações */
+.hearts {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.heart {
+  position: absolute;
+  top: -30px;
+  font-size: 24px;
+  animation: cair 5s linear forwards;
+}
+
+.music-control {
+  display: flex;
+  justify-content: center;
+  margin-top: -10px;
+  margin-bottom: 15px;
+}
+
+.music-control button {
+  background-color: #d6336c;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  font-size: 1.2rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.music-control button:hover {
+  background-color: #c2255c;
+}
+
+
+@keyframes cair {
+  to {
+    transform: translateY(100vh);
+    opacity: 0;
+  }
+}
+
+/* 📱 Responsivo */
+@media screen and (max-width: 600px) {
+  .container {
+    margin: 20px;
+    padding: 15px;
+  }
+
+  h1 {
+    font-size: 1.4rem;
+  }
+
+  h2 {
+    font-size: 1rem;
+  }
+
+  p {
+    font-size: 0.95rem;
+  }
+
+  .image-container img {
+    max-height: 250px;
+    object-fit: cover;
+  }
+}
